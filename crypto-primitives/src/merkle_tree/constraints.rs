@@ -207,7 +207,7 @@ impl<P: Config, F: PrimeField, PG: ConfigGadget<P, F>> PathVar<P, F, PG> {
 
         let mut curr_hash =
             PG::TwoToOneHash::evaluate(two_to_one_params, left_hash.borrow(), right_hash.borrow())?;
-        // To traverse up a MT, we iterate over the path from bottom to top (i.e. in reverse)
+        // To traverse up an MT, we iterate over the path from bottom to top (i.e. in reverse)
 
         // At any given bit, the bit being 0 indicates our currently hashed value is the left,
         // and the bit being 1 indicates our currently hashed value is on the right.
